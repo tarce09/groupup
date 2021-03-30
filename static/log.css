@@ -1,0 +1,76 @@
+body{
+    padding: 0%;
+    margin: 0%;
+    
+}
+
+.navtext{
+    color: #000;
+    font-weight: 600;
+    font-size: 19px;
+    text-decoration: none;
+    transition: 400ms;
+}
+.navtexthead{
+    color: #000;
+    font-weight: 600;
+    font-size: 25px;
+    text-decoration: none;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.navtext:hover{
+    font-weight: 725;
+    padding-left: 7px;
+}
+nav{ 
+    background-color: #fff;
+    margin-top: 1%;
+    transition: 200ms;
+}
+nav.sticky{
+    margin-top: 0%;
+    box-shadow: 2px 2px 140px black;
+}
+
+.boxy{
+    margin: 100px 50px;
+    margin-bottom: 0%;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    margin-bottom: 30px;
+    transform: scale(0.95,0.95);
+}
+.boxy h2{
+    color: #00B0FF;
+    font-weight: 550;
+}
+.wave{
+    margin-top:0px;
+    position: fixed;
+    width: 100%;
+    
+}
+.buttons{
+    background-color: #00B0FF;
+    color: #fff;
+    transition: 300ms;
+    
+}
+.buttons:hover{
+    padding-left: 17px;
+    padding-right: 17px;
+    transition: 300ms;
+}
+@keyframes transitionin{
+    from {
+        opacity: 0;
+        transform: scale(0.9,0.9);
+    }
+    to{
+        opacity: 1;
+        transform: scale(0.95,0.95);
+    }
+}
+.fadein{
+    animation: transitionin 1s;
+}

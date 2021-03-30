@@ -1,0 +1,33 @@
+<div class="post container">
+	
+	
+		{% if user.is_authenticated and post.user == user and not hide_delete %}
+			<div class="">
+			<h6 class="">
+			<span class="username"><i class="fas fa-user-edit usericon"></i> <a class="font-link" href="{% url 'posts:for_user' username=post.user.username %}">@{{ post.user.username }}</a></span>
+			<time class="time">{{ post.created_at }}</time>
+				{% if post.group %}
+				<span class="group-name">in the group: {{ post.group.name }}</span>
+				{% endif %}
+			</h6>
+			<p class=""><i class="fas fa-angle-double-right"></i><i> {{ post.message }} </i></p>
+			<div class="">
+			<a href="{% url 'posts:delete' pk=post.pk %}" title="delete" class="btn btn-simple">
+					
+			<span class="text-danger icon-label">Delete</span>
+			</a>
+		{%else%}
+			<div class="">
+			<h6 class="">
+			<span class="username"><i class="fas fa-user-tag usericon other"></i> <a class="font-link" href="{% url 'posts:for_user' username=post.user.username %}">@{{ post.user.username }}</a></span>
+			<time class="time">{{ post.created_at }}</time>
+				{% if post.group %}
+				<span class="group-name">in the group: {{ post.group.name }}</span>
+				{% endif %}
+			</h6>
+			<p class=""><i class="fas fa-angle-double-right"></i><i> {{ post.message }} </i></p>
+			<div class="">
+			{% endif %}
+		</div>
+	</div>
+</div>

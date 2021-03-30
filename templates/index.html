@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'index.css' %}" >
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="{% static 'index.js' %}"></script>     
+    </head>
+    
+    <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top fadebtm ">
+    <a class="navbar-brand mb-0 h1" href="#"><span class="navtexthead">GroupUP</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="/"><span class="navtext">Home</span><span class="sr-only">(current)</span></a>
+        </li>
+        {% if user.is_authenticated %}
+        
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'posts:create' %}"><span class="navtext">Post</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'groups:all' %}"><span class="navtext">Groups</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'groups:create' %}"><span class="navtext">Create Groups</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/logout"><span class="navtext">Logout</span></a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+            <a class="nav-link" href="/login"><span class="navtext">Login</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/signup"><span class="navtext">Resister</span></a>
+        </li>
+        
+        {% endif %}
+        </ul>
+        </form>
+    </div>
+    </nav>
+    <div class="container content ">
+  <div class="row">
+    <div class="col">
+        <div class="maintext fadeleft"> Group<span class="up">UP</span><p>
+            {% if user.is_authenticated %}
+            <a class="reglink" href="{% url 'groups:all' %}">Groups</a></div>
+            {% else %}
+            <a class="reglink" href="/signup">Register</a></div>
+            {% endif %}
+        </div>
+    <div class="col imgcol">
+        <img class="image-home faderight" src="{% static 'undraw_Messaging_fun_re_vic9-removebg.png' %}" alt="Italian Trulli">
+    </div>
+  </div>
+  </div>
+    <div class="details fadescroll">
+        <div class="container">
+            <div class="aboutus">
+                <div class="heading">About GroupUP</div>
+                <div class="text">This website helps you find groups made by other people who share similar intrests.
+                                One can directly go into our Groups section and view the content of the groups and join them . You can post in any group you want and see the posts of 
+                                any group present on our website .If you find no 
+                                group that you want to be a part of ... then no worries , go to the Create groups section and make your own group
+                                and build an online community.  So what are u waiting for ....... join <b> GroupUp </b> today .</div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="note">
+        <div class="container">
+            <div class="developer">
+                <div class="heading">Hey this is ARYAN</div>
+                <div class="text"><i>''I am very glad to present you this project which has some basic social media features.
+                This site's main concept is to let people find groups which have a genre of content that he/she likes. This is the basic version of the project and i will keep on 
+                improving it and adding new features if i get a good response. You can contact me if u have any doubt and even check my portfolio by clicking <a href="https://tarce09.github.io/portfolio/">here</a>. 
+                You can also mail me your problems at aryanraju09@gmail.com. I hope you have a wonderful experience finding new friends and grouping up.''</i></div>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="info container">
+            <div class="heading">Contact Us</div>
+            <div class="text container">These are some socail media handles where you can contact the developer
+            for some bug removal and improvement suggestions   
+        </div><br>
+        <div class="socials container">
+        <ul class="handles">
+            <li class="lis">
+            <a href="https://instagram.com/intruder_x?igshid=1af49fo566vm5" target="_blank" class="icons">
+                <i class="fab fa-instagram"></i>
+            </a>
+            </li>
+            <li class="lis">
+            <a href="https://twitter.com/Intruderx5?s=08" target="_blank" class="icons">
+                <i class="fab fa-twitter"></i>
+            </a></li>
+            <li class="lis">
+            <a href="https://www.linkedin.com/in/t-aryan-raju-9459311b3" target="_blank" class=" icons">
+                <i class="fab fa-linkedin-in"></i>
+            </a></li>
+            <li class="lis">
+            <a href="https://github.com/tarce09" target="_blank" class="icons">
+                <i class="fab fa-github"></i>
+            </a></li>
+        </ul>
+        </div>
+
+        <div class="copyright">
+            copyright <i class="far fa-copyright"></i> 2021 all rights reserved
+        </div>
+        </div>
+    </div>
+    </body>
+</html>

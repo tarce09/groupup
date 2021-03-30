@@ -1,0 +1,12 @@
+{% extends "posts/post_base.html" %}
+
+{% block post_content %}
+<h4 class="font">Your post has been delivered</h4>
+<br>
+<div class="font">
+{% include "posts/_post.html" %}</div>
+<br>
+<div class="">
+<a href="{% url 'groups:all' %}" class="btn btn-md btn-fill btn-warning">Groups</a>
+</div>
+{% endblock %}

@@ -1,0 +1,165 @@
+body{
+    padding: 0%;
+    margin: 0%;
+    background:linear-gradient(135deg, #38b7f2 0%,#833cf6 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100%;
+    width: 100%;
+}
+
+.navtext{
+    color: #000;
+    font-weight: 600;
+    font-size: 19px;
+    text-decoration: none;
+    transition: 400ms;
+}
+.navtexthead{
+    color: #000;
+    font-weight: 600;
+    font-size: 25px;
+    text-decoration: none;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.navtext:hover{
+    font-weight: 725;
+    padding-left: 7px;
+}
+nav{ 
+    transition: 200ms;
+    background-color: #fff;
+    box-shadow: inset -1px -1px 2px rgba(0,0,0,0.2),
+    2px 2px 5px rgba(0,0,0,0.2);
+    
+}
+
+.collapse{
+
+    transition: 300ms;
+}
+nav.sticky{
+    margin-top: 0%;
+    background:linear-gradient(135deg, hsl(314, 87%, 56%) 0%,#6094ea 100%);
+    box-shadow: 2px 2px 50px black;
+
+}
+
+
+.posts-page{
+    margin-top: 120px;
+    margin-bottom: 50vh;
+}
+#postForm{
+    margin-top: 30px;
+}
+#create{
+    margin-top: 50px;
+    height: 30px;
+
+}
+.toptext{
+    font-weight: 500;
+    color: #fff;
+}
+.grps{
+    background-color: aqua;
+}
+.boxy{
+    padding: 20px;
+    border-radius: 20px;
+    font-size: large;
+    text-decoration: none;
+    transition: 300ms;
+    background:linear-gradient(135deg, #e3e3e3 0%,#e3e3e3 100%);
+    box-shadow: inset -1px -1px 2px rgba(0,0,0,0.2),
+    2px 2px 5px rgba(0,0,0,0.2);
+}
+.title{
+    color: #6094ea;
+    font-weight: 500;
+    font-size: 30px;
+}
+.badge{
+    color: black;
+}
+.linking{
+    
+    text-decoration: none;
+
+}
+.boxy:hover{
+    padding: 25px;
+    text-decoration: none;
+}
+.font{
+    color: #fff;
+}
+.reglink{
+    border-radius: 60px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #00B0FF;
+    font-size: 30px;
+    padding:5px 20px ;
+    color: #00B0FF;
+    text-decoration: none;
+    transition: 500ms;
+}
+.reglink:hover{
+    border-radius: 60px;
+    font-size: 30px;
+    padding:5px 24px ;
+    color: #fff;
+    background-color: #00B0FF;
+    text-decoration: none;
+}
+
+.font-link{
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    font-size: 25px;
+    transition: 300ms;
+}
+.font-link:hover{
+    padding-left: 5px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.usericon{
+    color: #17D413;   
+}
+.usericon.other{
+    color: #0C55C9;
+}
+.namegrp:hover{
+    text-decoration: none;
+}
+@keyframes transitionin{
+    from {
+        opacity: 0;
+        transform: scale(0.9,0.9);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1,1);
+    }
+}
+@keyframes transitionbtm{
+    from {
+        opacity: 0;
+        transform: translateY(-40px)
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+.fadein{
+    animation: transitionin 1s;
+}
+
+.fadebtm{
+    animation: transitionbtm 1s;
+}
