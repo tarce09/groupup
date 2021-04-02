@@ -34,7 +34,6 @@ urlpatterns = [
     path("thanks/",views.ThanksPage.as_view(),name="thanks"),
     url(r"^posts/", include("posts.urls", namespace="posts")),
     url(r"^groups/",include("groups.urls", namespace="groups")),
-    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
     url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
 
 
